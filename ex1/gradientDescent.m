@@ -11,14 +11,14 @@ for iter = 1:num_iters
 
     t = theta'.*X;
 	t = t(:,1)+t(:,2);
-	t = t - y
+	t = t - y;
 	
 	%t1 = theta(1) - alpha / m * sum(t.*X(:,1));
 	%t2 = theta(2) - alpha / m * sum(t.*X(:,2));
 	%theta = [t1; t2]
 
 	s = alpha / m * sum(t.*X);
-	theta = theta - s'
+	theta = theta - s';
 
     % ============================================================
 
